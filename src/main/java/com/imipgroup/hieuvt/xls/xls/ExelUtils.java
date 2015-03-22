@@ -34,7 +34,7 @@ public class ExelUtils {
     }
 
     public String createNewExel(String fileName, List<List<String>> data){
-        String filePath = "files/Exel" + fileName +".xlsx";
+        String filePath = "files/Exel/" + fileName +".xlsx";
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet("Sample Sheet");
         int rowNum = 0;
@@ -47,7 +47,7 @@ public class ExelUtils {
             }
         }
         try {
-            FileOutputStream out = new FileOutputStream(new File(filePath));
+            FileOutputStream out = new FileOutputStream(new File(filePath)); //in struts, write to output stream
             workbook.write(out);
             out.close();
         } catch (FileNotFoundException e) {

@@ -37,8 +37,8 @@ public class ExelUtilsTest {
         row1.add("col11");
         row1.add("col12");
         List<String> row2 = new ArrayList<String>();
-        row1.add("col21");
-        row1.add("col22");
+        row2.add("col21");
+        row2.add("col22");
         List<List<String>> rows = new ArrayList<List<String>>();
         rows.add(row1);
         rows.add(row2);
